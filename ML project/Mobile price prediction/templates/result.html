@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link href="static/css/result.css" rel="stylesheet">
+</head>
+<body>
+    <div class="result-box">
+    <h1>Mobile Phone Price Range Prediction</h1>
+    <h2>Prediction Result:</h2>
+    <p>The predicted price range is: <strong>
+        {% if res == 0 %}
+            Low Range Mobile
+        {% elif res == 1 %}
+            Medium Range Mobile
+        {% elif res == 2 %}
+            High Range Mobile
+        {% elif res == 3 %}
+            Premium Range Mobile
+        {% else %}
+            Unknown
+        {% endif %}
+    </strong></p>
+    
+    <br>
+    <a href="/input" class="back-button">Make Another Prediction</a>
+</div>
+</body>
+</html>

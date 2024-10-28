@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile price range predction</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/styleinput.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+            backdrop-filter: blur(5px);
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+        .container {
+            width: 80%; /* Increased width */
+            max-width: 900px; /* Maximum width */
+            margin: 50px auto; /* Center the container */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        h1 {
+            margin-bottom: 30px;
+            color: #007bff;
+        }
+        .form-group label {
+            font-weight: bold;
+            color: #343a40;
+        }
+        input.form-control, select.form-control {
+            background-color: rgba(255, 255, 255, 0.9); /* Increased opacity */
+            color: #343a40;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+        }
+        select.form-control {
+            padding-right: 30px; /* Add padding to the right for better visibility */
+        }
+        input.form-control::placeholder, select.form-control option {
+            color: #6c757d;
+        }
+        .button-group {
+            margin-top: 30px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+            border: none;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">ADD YOUR PHONE FEATURES</h1>
+        <form id="loan-form" method="POST" action="/result">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="battery_power">Batterypower(mAh):</label>
+                    <input type="number" class="form-control" id="battery_power" name="battery_power" placeholder="Enter battery_power" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="int_memory">INTERNAL MEMORY(gb):</label>
+                    <input type="number" class="int_memory" name="int_memory" id="int_memory" required>
+                        
+                
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="mobile_wt">MOBILE WEIGHT(grams):</label>
+                    <input type="number" class="form-control" id="mobile_wt" name="mobile_wt" placeholder="Enter mobile weight" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="n_cores">N CORE:</label>
+                    <input type="number" class="form-control" name="n_cores" id="n_cores" required>
+                       
+                   
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="px_height">PIXEL HEIGHT(pixel):</label>
+                    <input type="number" class="form-control" id="px_height" name="px_height" placeholder="Enter pixel height" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="px_width">PIXEL WIDTH(pixel):</label>
+                    <input type="number" class="form-control" id="px_width" name="px_width" placeholder="Enter pixel width" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="ram">RAM(mb):</label>
+                    <input type="number" class="form-control" id="ram" name="ram" placeholder="Enter ram" required>
+                </div>
+               
+            <div class="button-group text-center">
+                <button type="submit" class="btn btn-primary">PREDICT</button>
+                <button type="button" class="btn btn-secondary" onclick="window.location.href='/'">Home</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
